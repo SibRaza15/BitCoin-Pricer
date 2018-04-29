@@ -1,22 +1,15 @@
 package com.bitcoin;
 
 public class BitCoinPricer {
-	
-	static BitCoinValueService b = new BitCoinValueService();
+    BitCoinValueService valueService;
 
-	
-	public BitCoinPricer(BitCoinValueService b){
-		this.b = b; 
-	}
-	
-public static  double convertEuro (double result){
-		
-		double euroVal = 1.227481; 
-		
-		result = b.findPrice() * euroVal;
-		
-		return result;
-		
-	}
-	
+    public BitCoinPricer(BitCoinValueService valueService){
+        this.valueService = valueService; 
+    }
+
+    public double convertEuro (){
+        double euroVal = 1.227481; 
+        double result = valueService.findPrice() * euroVal;
+        return result;
+    }
 }
