@@ -6,70 +6,104 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
-
+import org.junit.runner.RunWith;
 
 import static org.junit.Assert.assertEquals;
+import org.testng.annotations.DataProvider;
 
-
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.Mockito;
+import junitparams.JUnitParamsRunner;
+import org.mockito.Mock;
+import static org.mockito.Mockito.when;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.times;
+import org.mockito.Mockito;
+import org.mockito.MockitoAnnotations;
+
+import com.tngtech.java.junit.dataprovider.UseDataProvider;
+
+@RunWith(JUnitParamsRunner.class)
 public class BitcoinPricerTest {
 	
-	
-	BitCoinPricer b = null; 
-	BitCoinValueService service = Mockito.mock(BitCoinValueService.class);
-	
-	private BitCoinValueService bitCoinValueService;
-	private BitCoinPricer bitCoinPricer;
-	
-	
-	@Before
-	public void setData(){
-		bitCoinValueService = new BitCoinValueService();
-		bitCoinPricer = new BitCoinPricer(bitCoinValueService);
-		
-	}
-	
-	@Before
-	public void setUp(){
-		b = new BitCoinPricer(service);
-	}
-	
-	//at the time of testing the euro to dollar conversion rate was 1.227481 and 
-	//Bitcoin price in euros was 7,257.08.
-	
-	@Test
-	public void AssertEquals_Expected_Output() {
-		assertEquals(8955.56, BitCoinPricer.convertEuro(service.findPrice()), 0.10);
-	}
 
 	@Test
-	public void AssertNull_BitCoinPricer_Output() {
-		assertNull(null, BitCoinPricer.convertEuro(service.findPrice()));
-	}
+	public void testMock1 (){
+        //Arrange
+        double price = 6000.00;
+        BitCoinValueService bsp = Mockito.mock(BitCoinValueService.class);
+        Mockito.when(bsp.findPrice()).thenReturn(price);
+        BitCoinPricer bp = new BitCoinPricer(bsp);            
+        double expected = price * 1.227481;
+
+        //Act
+        double actual = bp.convertEuro();
+
+        //Assert
+        assertEquals(expected, actual, 1.0);
+        Mockito.verify(bsp).findPrice();
+    }
 	
+	@Test
+	public void testMock2 (){
+        //Arrange
+        double price = 8000.00;
+        BitCoinValueService bsp = Mockito.mock(BitCoinValueService.class);
+        Mockito.when(bsp.findPrice()).thenReturn(price);
+        BitCoinPricer bp = new BitCoinPricer(bsp);            
+        double expected = price * 1.227481;
+
+        //Act
+        double actual = bp.convertEuro();
+
+        //Assert
+        assertEquals(expected, actual, 1.0);
+        Mockito.verify(bsp).findPrice();
+    }
 	@Test(expected=NullPointerException.class)
-	public void AssertEquals_Null_Ex() {
-		assertEquals(8955.56, BitCoinPricer.convertEuro((Double) null), 0.10);
-	}
+	public void testMock3 (){
+        //Arrange
+        double price = (Double) null;
+        BitCoinValueService bsp = Mockito.mock(BitCoinValueService.class);
+        Mockito.when(bsp.findPrice()).thenReturn(price);
+     
+        //Assert
+        assertNull(bsp.findPrice());
+        Mockito.verify(bsp).findPrice();
+    }
+	@Test
+	public void testMock4 (){
+        //Arrange
+        double price = 0.00;
+        BitCoinValueService bsp = Mockito.mock(BitCoinValueService.class);
+        Mockito.when(bsp.findPrice()).thenReturn(price);
+        BitCoinPricer bp = new BitCoinPricer(bsp);            
+        double expected = price * 1.227481;
+
+        //Act
+        double actual = bp.convertEuro();
+
+        //Assert
+        assertEquals(expected, actual, 1.0);
+        Mockito.verify(bsp).findPrice();
+    }
 
 	// integration testing
 	@Test
 	public void testAssertEqualsSameObjects() {
-		bitCoinPricer.convertEuro(bitCoinValueService.findPrice());
-		assertEquals("The same object", bitCoinValueService.findPrice(),this.bitCoinValueService.findPrice(), 5.00);
+		BitCoinValueService bsp = Mockito.mock(BitCoinValueService.class);
+		BitCoinPricer bp = new BitCoinPricer(bsp);
+		bp.convertEuro();
+		assertEquals("These are two different object", bsp.findPrice(),bp.convertEuro(), 5.00);
 	}
 	
-	@Test
-	public void testAssertEqualsFalseDiffObject() {
-		BitCoinValueService s = new BitCoinValueService();
-		BitCoinPricer b = new BitCoinPricer(bitCoinValueService);
-		s.findPrice();
-		b.convertEuro(s.findPrice());
-		assertEquals("The object is not the same",s.findPrice(),b.convertEuro(s.findPrice()),5.00);
-	}
-
+	
 }
+
 
