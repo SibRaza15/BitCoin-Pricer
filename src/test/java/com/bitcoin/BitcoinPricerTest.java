@@ -52,19 +52,12 @@ public class BitcoinPricerTest {
 	
 	@Test
 	public void testMock2 (){
-        //Arrange
-        double price = 8000.00;
-        BitCoinValueService bsp = Mockito.mock(BitCoinValueService.class);
-        Mockito.when(bsp.findPrice()).thenReturn(price);
-        BitCoinPricer bp = new BitCoinPricer(bsp);            
-        double expected = price * 1.227481;
+		BitCoinValueService bsp = new BitCoinValueService();
+		 BitCoinPricer bp = new BitCoinPricer(bsp);
+	        Mockito.when(bsp.findPrice()).thenReturn(6000.00);
 
-        //Act
-        double actual = bp.convertEuro();
-
-        //Assert
-        assertEquals(expected, actual, 1.0);
-        Mockito.verify(bsp).findPrice();
+	        assertEquals(bp.convertEuro(),6000.00,1.0);
+	        Mockito.verify(bsp).findPrice();
     }
 	@Test(expected=NullPointerException.class)
 	public void testMock3 (){
