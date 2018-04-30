@@ -8,7 +8,8 @@ public class main {
 		BitCoinValueService t = new BitCoinValueService();
 		BitCoinPricer b = new BitCoinPricer(t);
 		
-		double  result = b.convertEuro();
+		// removed semi-colon - should cause program not to run. 
+		double  result = b.convertEuro()
 		
 		System.out.println("The value of bitcoin in dolllars is "+ "$"+ result);
 
