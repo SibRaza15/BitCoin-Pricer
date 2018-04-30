@@ -1,7 +1,10 @@
 language: java
 notifications:
   email:
-    - sibraza15@gmail.com
-    - sr1922@mynsu.nova.edu
+    recipients:
+      - sibraza15@gmail.com
+    on_success: always # default: change
+    on_failure: always # default: always
+
 sudo: false
 script: mvn clean verify
