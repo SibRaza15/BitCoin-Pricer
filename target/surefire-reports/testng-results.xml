@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="5" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="917" started-at="2018-04-30T02:16:50Z" finished-at="2018-04-30T02:16:51Z">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="917" started-at="2018-04-30T02:16:50Z" finished-at="2018-04-30T02:16:51Z">
+      <class name="com.bitcoin.BitcoinPricerTest">
+        <test-method status="PASS" signature="testMock1()[pri:0, instance:testMock1(com.bitcoin.BitcoinPricerTest)]" name="testMock1" duration-ms="790" started-at="2018-04-29T22:16:50Z" finished-at="2018-04-29T22:16:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMock1 -->
+        <test-method status="PASS" signature="testMock2()[pri:0, instance:testMock2(com.bitcoin.BitcoinPricerTest)]" name="testMock2" duration-ms="1" started-at="2018-04-29T22:16:51Z" finished-at="2018-04-29T22:16:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMock2 -->
+        <test-method status="PASS" signature="testMock3()[pri:0, instance:testMock3(com.bitcoin.BitcoinPricerTest)]" name="testMock3" duration-ms="0" started-at="2018-04-29T22:16:51Z" finished-at="2018-04-29T22:16:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMock3 -->
+        <test-method status="PASS" signature="testMock4()[pri:0, instance:testMock4(com.bitcoin.BitcoinPricerTest)]" name="testMock4" duration-ms="0" started-at="2018-04-29T22:16:51Z" finished-at="2018-04-29T22:16:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMock4 -->
+        <test-method status="PASS" signature="testAssertEqualsSameObjects()[pri:0, instance:testAssertEqualsSameObjects(com.bitcoin.BitcoinPricerTest)]" name="testAssertEqualsSameObjects" duration-ms="0" started-at="2018-04-29T22:16:51Z" finished-at="2018-04-29T22:16:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAssertEqualsSameObjects -->
+      </class> <!-- com.bitcoin.BitcoinPricerTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
