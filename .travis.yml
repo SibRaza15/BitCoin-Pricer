@@ -3,6 +3,5 @@ notifications:
   email:
     - sibraza15@gmail.com
     - sr1922@mynsu.nova.edu
-install: true
-script:
-- mvn install
+sudo: false
+script: mvn clean verify
