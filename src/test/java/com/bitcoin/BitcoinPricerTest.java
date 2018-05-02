@@ -59,7 +59,7 @@ public class BitcoinPricerTest {
         BitCoinPricer bp = new BitCoinPricer(bsp);            
         
         // bad logic 
-        double expected = 8000.00 * 1.227481;
+        double expected = price * 1.227481;
 
         //Act
         double actual = bp.convertEuro();
@@ -95,8 +95,23 @@ public class BitcoinPricerTest {
         assertEquals(expected, actual, 1.0);
         Mockito.verify(bsp).findPrice();
     }
+	
+	@Test
+	public void testMock5 (){
+        //Arrange
+        double price = -1000.00;
+        BitCoinValueService bsp = Mockito.mock(BitCoinValueService.class);
+        Mockito.when(bsp.findPrice()).thenReturn(price);
+        BitCoinPricer bp = new BitCoinPricer(bsp);            
+        double expected = price * 1.227481;
 
-	// integration testing
+        //Act
+        double actual = bp.convertEuro();
+
+        //Assert
+        assertEquals(expected, actual, 1.0);
+        Mockito.verify(bsp).findPrice();
+    }
 	@Test
 	public void testAssertEqualsSameObjects() {
 		BitCoinValueService bsp = Mockito.mock(BitCoinValueService.class);
@@ -104,8 +119,37 @@ public class BitcoinPricerTest {
 		bp.convertEuro();
 		assertEquals("These are two different object", bsp.findPrice(),bp.convertEuro(), 5.00);
 	}
-	
-	
+
+	// integration testing
+	@Test
+	public void testIntegration_TDD() {
+		
+		double price = 9000.00;
+        BitCoinValueService bsp = Mockito.mock(BitCoinValueService.class);
+        Mockito.when(bsp.findPrice()).thenReturn(price);
+        BitCoinPricer bp = new BitCoinPricer(bsp);  
+        
+ 
+ 
+        assertEquals(11047.32,bp.convertEuro_TDD(bsp.findPrice()),1.00);
+        Mockito.verify(bsp, times(2)).findPrice();
+		
+	}
+@Test
+public void testIntegration() {
+		
+		double price = 9000.00;
+        BitCoinValueService bsp = Mockito.mock(BitCoinValueService.class);
+        Mockito.when(bsp.findPrice()).thenReturn(price);
+        BitCoinPricer bp = new BitCoinPricer(bsp);  
+        
+ 
+ 
+        assertEquals(11047.32,bp.convertEuro(),1.00);
+        Mockito.verify(bsp, times(1)).findPrice();
+		
+	}
+
 }
 
 

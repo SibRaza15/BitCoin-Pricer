@@ -1,32 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="5" passed="5">
+<testng-results skipped="0" failed="0" total="8" passed="8">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="917" started-at="2018-04-30T02:16:50Z" finished-at="2018-04-30T02:16:51Z">
+  <suite name="Surefire suite" duration-ms="1170" started-at="2018-05-02T02:05:29Z" finished-at="2018-05-02T02:05:30Z">
     <groups>
     </groups>
-    <test name="Surefire test" duration-ms="917" started-at="2018-04-30T02:16:50Z" finished-at="2018-04-30T02:16:51Z">
+    <test name="Surefire test" duration-ms="1170" started-at="2018-05-02T02:05:29Z" finished-at="2018-05-02T02:05:30Z">
       <class name="com.bitcoin.BitcoinPricerTest">
-        <test-method status="PASS" signature="testMock1()[pri:0, instance:testMock1(com.bitcoin.BitcoinPricerTest)]" name="testMock1" duration-ms="790" started-at="2018-04-29T22:16:50Z" finished-at="2018-04-29T22:16:51Z">
+        <test-method status="PASS" signature="testMock1()[pri:0, instance:testMock1(com.bitcoin.BitcoinPricerTest)]" name="testMock1" duration-ms="1045" started-at="2018-05-01T22:05:29Z" finished-at="2018-05-01T22:05:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMock1 -->
-        <test-method status="PASS" signature="testMock2()[pri:0, instance:testMock2(com.bitcoin.BitcoinPricerTest)]" name="testMock2" duration-ms="1" started-at="2018-04-29T22:16:51Z" finished-at="2018-04-29T22:16:51Z">
+        <test-method status="PASS" signature="testMock2()[pri:0, instance:testMock2(com.bitcoin.BitcoinPricerTest)]" name="testMock2" duration-ms="1" started-at="2018-05-01T22:05:30Z" finished-at="2018-05-01T22:05:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMock2 -->
-        <test-method status="PASS" signature="testMock3()[pri:0, instance:testMock3(com.bitcoin.BitcoinPricerTest)]" name="testMock3" duration-ms="0" started-at="2018-04-29T22:16:51Z" finished-at="2018-04-29T22:16:51Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testMock3 -->
-        <test-method status="PASS" signature="testMock4()[pri:0, instance:testMock4(com.bitcoin.BitcoinPricerTest)]" name="testMock4" duration-ms="0" started-at="2018-04-29T22:16:51Z" finished-at="2018-04-29T22:16:51Z">
+        <test-method status="PASS" signature="testMock4()[pri:0, instance:testMock4(com.bitcoin.BitcoinPricerTest)]" name="testMock4" duration-ms="1" started-at="2018-05-01T22:05:30Z" finished-at="2018-05-01T22:05:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMock4 -->
-        <test-method status="PASS" signature="testAssertEqualsSameObjects()[pri:0, instance:testAssertEqualsSameObjects(com.bitcoin.BitcoinPricerTest)]" name="testAssertEqualsSameObjects" duration-ms="0" started-at="2018-04-29T22:16:51Z" finished-at="2018-04-29T22:16:51Z">
+        <test-method status="PASS" signature="testMock3()[pri:0, instance:testMock3(com.bitcoin.BitcoinPricerTest)]" name="testMock3" duration-ms="0" started-at="2018-05-01T22:05:30Z" finished-at="2018-05-01T22:05:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMock3 -->
+        <test-method status="PASS" signature="testMock5()[pri:0, instance:testMock5(com.bitcoin.BitcoinPricerTest)]" name="testMock5" duration-ms="1" started-at="2018-05-01T22:05:30Z" finished-at="2018-05-01T22:05:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMock5 -->
+        <test-method status="PASS" signature="testIntegration()[pri:0, instance:testIntegration(com.bitcoin.BitcoinPricerTest)]" name="testIntegration" duration-ms="0" started-at="2018-05-01T22:05:30Z" finished-at="2018-05-01T22:05:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIntegration -->
+        <test-method status="PASS" signature="testAssertEqualsSameObjects()[pri:0, instance:testAssertEqualsSameObjects(com.bitcoin.BitcoinPricerTest)]" name="testAssertEqualsSameObjects" duration-ms="0" started-at="2018-05-01T22:05:30Z" finished-at="2018-05-01T22:05:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAssertEqualsSameObjects -->
+        <test-method status="PASS" signature="testIntegration_TDD()[pri:0, instance:testIntegration_TDD(com.bitcoin.BitcoinPricerTest)]" name="testIntegration_TDD" duration-ms="0" started-at="2018-05-01T22:05:30Z" finished-at="2018-05-01T22:05:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIntegration_TDD -->
       </class> <!-- com.bitcoin.BitcoinPricerTest -->
     </test> <!-- Surefire test -->
   </suite> <!-- Surefire suite -->

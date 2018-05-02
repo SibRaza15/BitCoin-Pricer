@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.bitcoin.BitcoinPricerTest" time="1.371" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.bitcoin.BitcoinPricerTest" time="2.055" tests="8" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/jre/lib"/>
@@ -63,9 +63,12 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="testMock1 on testMock1(com.bitcoin.BitcoinPricerTest)" classname="com.bitcoin.BitcoinPricerTest" time="0.785"/>
+  <testcase name="testMock1 on testMock1(com.bitcoin.BitcoinPricerTest)" classname="com.bitcoin.BitcoinPricerTest" time="1.041"/>
   <testcase name="testMock2 on testMock2(com.bitcoin.BitcoinPricerTest)" classname="com.bitcoin.BitcoinPricerTest" time="0"/>
   <testcase name="testMock3 on testMock3(com.bitcoin.BitcoinPricerTest)" classname="com.bitcoin.BitcoinPricerTest" time="0"/>
   <testcase name="testMock4 on testMock4(com.bitcoin.BitcoinPricerTest)" classname="com.bitcoin.BitcoinPricerTest" time="0"/>
+  <testcase name="testMock5 on testMock5(com.bitcoin.BitcoinPricerTest)" classname="com.bitcoin.BitcoinPricerTest" time="0"/>
+  <testcase name="testIntegration on testIntegration(com.bitcoin.BitcoinPricerTest)" classname="com.bitcoin.BitcoinPricerTest" time="0"/>
   <testcase name="testAssertEqualsSameObjects on testAssertEqualsSameObjects(com.bitcoin.BitcoinPricerTest)" classname="com.bitcoin.BitcoinPricerTest" time="0"/>
+  <testcase name="testIntegration_TDD on testIntegration_TDD(com.bitcoin.BitcoinPricerTest)" classname="com.bitcoin.BitcoinPricerTest" time="0"/>
 </testsuite>

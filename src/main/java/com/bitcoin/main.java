@@ -8,7 +8,7 @@ public class main {
 		BitCoinValueService t = new BitCoinValueService();
 		BitCoinPricer b = new BitCoinPricer(t);
 		
-	// new commit
+
 		double  result = b.convertEuro();
 		
 		System.out.println("The value of bitcoin in dolllars is "+ "$"+ result);
