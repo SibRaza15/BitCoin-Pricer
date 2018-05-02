@@ -102,8 +102,10 @@ public class BitcoinPricerTest {
         double price = -1000.00;
         BitCoinValueService bsp = Mockito.mock(BitCoinValueService.class);
         Mockito.when(bsp.findPrice()).thenReturn(price);
-        BitCoinPricer bp = new BitCoinPricer(bsp);            
-        double expected = price * 1.227481;
+        BitCoinPricer bp = new BitCoinPricer(bsp);   
+        
+        //fail this test on purpose 
+        double expected = 5000.00 * 1.227481;
 
         //Act
         double actual = bp.convertEuro();
